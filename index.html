@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/377appstyle.css">
+        <title>NM2207 Final Project_e0773776</title>
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer type="text/javascript" src="appscripts/377main.js"></script>
+    </head>
+
+    <div id="container">
+        <img src="resources/PinkDot10.gif" title="Pink Dot 2018 is ready. Are you?" id="pinkDotImg">
+        <h1 class="centered-text">
+            Section 377A & the LGBTQ+ Community.<br>Let's talk about it.<br>
+        </h1>
+        <a href="#introWhole">
+            <img onmouseover="prideFlag1()" onmouseout="prideFlag2()" src="resources/pride-flag1.png" id="prideFlag" title="click me!">
+        </a>
+
+    </div>
+
+<body>
+
+<!-- introduction -->
+    <div id="introWhole">
+        <p class="introText"><strong>Ah, the ever infamous string of numbers that most Singaporeans shun away from. </strong><br></p>
+        
+        <p class="introText">Section 377A reads:
+        
+            <blockquote cite="https://en.wikipedia.org/wiki/Section_377A_(Singapore)#cite_note-14" id="introQuote">"Any male person who, in public or private, commits, 
+            or abets the commission of, or procures or attempts to procure the commission by any male person of, any act of gross indecency with another male person, 
+            shall be punished with imprisonment for a term which may extend to 2 years." <br>
+            — <em>Outrages on decency</em>, Section 377A, Singapore Penal Code
+        
+        </blockquote></p>
+        
+        <p class="introText">This law criminalises sex between males, regardless of whether the act was performed in private or not. It has always been a contentious issue between the LGBTQ+ community, 
+            who claimed the clause was discriminatory, and their opponents, who supported the retention of Section 377A due to reasons such as religious faith.
+            Last debated in Parliament back in 2007, Singapore has always taken a neutral stance at best regarding the LGBTQ+ community and Section 377A. 
+            However, the <a href="https://www.youtube.com/watch?v=lURfW4a1IcY" target="_blank" title="Watch it on Youtube!">announcement of the repeal of Section 377A on 21 August 2022</a> by Prime Minister Lee Hsien Loong during the annual National Day Rally 
+            marked a deliberate step towards greater acceptance. Section 377A was officially repealed on 3 January 2023, marking a momentous day for the LGBTQ+ community.
+        </p>
+
+        <p class="introText">Yet, the one-million dollar question markedly remains: <em>"Will the repeal of Section 377A mark the end of discrimination and stereotypes against the community?
+        Is this enough to change Singaporeans' perception on the LGBTQ+ community?"</em></p>
+        
+        <p class="introText">Read on to find out more!</p>
+        
+        <a href="#changePerception">
+            <img a href="#introWhole" src="resources/arrow.gif" id="prideArrow" title="let's go!">
+        </a>
+
+
+    </div>
+
+    <br>
+
+<!-- pie chart: change of perception, 2018 VS 2022 -->
+<div id="changePerception">
+    <p class="introText"><strong>Let's first understand how Singaporeans' perception on LGBTQ+ issues have changed from 2018 to 2022.</p>
+
+    <div id="canvas-pie">
+        <canvas id="PieQ1"></canvas>
+        <canvas id="PieQ2"></canvas>
+    </div>
+
+    <div id="button-pie">
+        <button id="button2018">2018</button>
+        <button id="button2022">2022</button>
+    </div>
+    
+    <br>
+
+
+<!-- bar chart: change of perception, 2018 VS 2022 -->
+    <p class="introText"><strong>How about the change in perception from 2013 to 2018, assessed via a few questions posed to interviwees?</p>
+
+    <div id="canvas-bar">
+        <canvas id="singaporean-perception-change" width="400" height="400"></canvas>
+    </div>
+
+    <div class="explanation">
+    <p>There <em>seems</em> to be a clear trend in growing acceptance of the LGBTQ+ community in Singapore, 
+        with a growing percentage of Singaporeans disagreeing with the discriminatory statements.</p>
+    <p>However, is this the case throughout the whole Singaporean population? Let's dive into another set of data, comparing between Gen Zs and Baby Boomers.</p>
+    </div>
+
+    <a href="#youngOld">
+        <img src="resources/arrow.gif" id="prideArrow" title="let's go!">
+    </a>
+
+</div>
+
+    <br>
+
+<!-- bar chart: split data by age -->
+<div id="youngOld">
+    <div class="canvas-bar">
+        <canvas id="age-difference" width="400" height="400"></canvas>
+    </div>
+
+    <div class="explanation">
+        <p>Well, it seems like the consensus is quite split when different age groups are analysed. 
+        The younger generation tend to show greater support for the community and oppose of Section 377A, 
+        while the older generation who tend to hold more conservative and traditional views are more likely to support Section 377A and are less accepting of the community.</p>
+        <p>Granted, the data presented here is from 2018, but given that these deeply-rooted perceptions take a long time to shift, 
+        it would be safe to assume that the older generation is generally less accepting of the LGBTQ+ community than the younger generation.
+        </p>
+    </div>
+
+    <a href="#conclusion">
+        <img src="resources/arrow.gif" id="prideArrow" title="let's go!">
+    </a>
+
+</div>
+
+<!-- conclusion -->
+<div id="conclusion">
+    <p id="conclusionHeader">So... What's next for Singapore?</p>
+    <p class="conclusionText">While the repeal of Section 377A is a step in the right direction, the stigmatisation and discrimination against the LGBTQ+ society is still rather prominent in our society today. 
+        Many cite religious beliefs and societal norms as reasons as to why they are not accepting of the LGBTQ+ society, and would definitely be challenging to expect immediate changes in perceptions right after the repeal of Section 377A.
+    </p>
+    <p class="conclusionText">However, views on the community are changing, slowly but surely, and more conversations on this “taboo” topic are starting to surface. 
+        As the nation's next generation of leaders and trailblazers, let's aspire to shift perceptions and create a society with greater acceptance!
+    </p>
+
+    <br>
+<div id="canvas-vote-pie">
+    <canvas id="votePie"></canvas>
+</div> 
+
+<div id="voteButton">
+    <button id="supportButton">I support Section 377A!</button>
+    <button id="opposeButton">I oppose Section 377A!</button>
+</div>
+
+<br>
+
+<!--- pride flag table -->
+    <table>
+        <tr>
+        <button id="colorButton">complete the pride flag!</button>
+        </tr>
+
+        <tr>
+            <td id="orange"></td>
+        </tr>
+
+        <tr>
+            <td id="yellow"></td>
+        </tr>
+
+        <tr>
+            <td id="green"></td>
+        </tr>
+
+        <tr>
+            <td id="blue"></td>
+        </tr>
+
+        <tr>
+            <td id="purple"></td>
+        </tr>
+
+    </table>
+
+    <br>
+
+<!-- contact form -->
+    <form id="formID">
+        <h2 id="formTitle">Let's keep in touch!</h2>
+        <input type="text" placeholder="Name" name="Name" class="formContent"><br>
+        <input type="text" placeholder="Contact Number" name="Contact number" class="formContent"><br>
+        <input type="email" placeholder="Email" name="Email" class="formContent"><br>
+        <textarea placeholder="Your thoughts here!" rows="5" name="Thoughts" class="formContent"></textarea><br>
+        <p class="formContent">Please select your preferred mode of contact:<br>
+        <input type="radio" name="contact preference" value="Phone">
+            <label for="Phone">Phone</label><br>
+        <input type="radio" name="contact preference" value="Email">
+            <label for="Email">Email</label><br></p>
+        <button type="submit" id="buttonSubmit"><a href=#container>Submit</a></button>
+    </form>
+
+</div>
+
+    </body>
+
+</html>
