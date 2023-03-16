@@ -8,7 +8,6 @@ function prideFlag2() {
     document.getElementById("prideFlag").src= "resources/pride-flag1.png"
 }
 
-
 // pie chart: oppose VS support section 377A
 
 const pieQ1 = new Chart("PieQ1", 
@@ -293,4 +292,3 @@ document.getElementById("colorButton").addEventListener("click", function colorC
     console.log("change colour: " + newRgbString);
  }
  );
-
