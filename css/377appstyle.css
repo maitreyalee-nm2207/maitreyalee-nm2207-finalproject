@@ -10,6 +10,8 @@ html {
     color: white;
     font-family: monospace;
     font-size: larger;
+    display: flex;
+    flex-direction: column;
 }  
 
 #pinkDotImg {
@@ -39,28 +41,19 @@ html {
     transform: translate(-50%, -50%);
 }
 
-#pinkDotText {
-    position: absolute;
-    bottom: 10%;
-    font-size: 10px;
-    color: aliceblue;
-    display: flex;
-    background-color: black;
-    border-radius: 10px;
-}
-
-
 /* intro text */
 
 #introWhole {
     background-color: blanchedalmond;
     border-radius: 10px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .introText {
     font-family: Courier;
-    color: darkslategrey;
+    color: slategray;
     display: block;
     line-height: 30px;
     text-align: left;
@@ -84,11 +77,18 @@ html {
     font-size: large;
 }
 
+#youtubeVid {
+    margin: auto;
+    display: block;
+}
+
 
 /* div - perception change from 2018 VS 2022*/
 
 #changePerception {
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
 }
 
 #canvas-pie {
@@ -137,18 +137,15 @@ html {
 }
 
 
-/* split data by age */
+/* div: split data by age */
 
 #youngOld {
     background-color: lavenderblush;
+    display: flex;
+    flex-direction: column;
 }
-
 
 /* bar chart: 2013 VS 2018 */
-
-.canvas-bar {
-    align-items: center;
-}
 
 .explanation {
     font-family: monospace;
@@ -185,7 +182,7 @@ html {
 .conclusionText {
     padding: 10px;
     font-family: monospace;
-    color: salmon;
+    color: teal;
     font-size: larger;
     margin-left: 15%;
     margin-right: 15%;
@@ -241,7 +238,7 @@ html {
 
 /* pride flag table */
 
-table {
+#flagTable {
     border-collapse: collapse;
     width: 50%;
     margin-left: 25%;
@@ -292,6 +289,7 @@ table {
 #formID {
     background: lavender;
     padding: 15px;
+    margin: auto;
 }
 
 #formTitle {
@@ -326,4 +324,3 @@ table {
     background-color: mediumseagreen;
     box-shadow: 0 12px 10px 0 rgba(0,0,0,0.24);
 }
-
