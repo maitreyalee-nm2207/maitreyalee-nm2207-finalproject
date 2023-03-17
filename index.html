@@ -10,9 +10,9 @@
 
     <div id="container">
         <img src="resources/PinkDot10.gif" title="Pink Dot 2018 is ready. Are you?" id="pinkDotImg">
-        <h1 class="centered-text" id="typewriter">
+        <p class="centered-text">
             Section 377A & the LGBTQ+ Community.<br>Let's talk about it.<br>
-        </h1>
+        </p>
         <a href="#introWhole">
             <img onmouseover="prideFlag1()" onmouseout="prideFlag2()" src="resources/pride-flag1.png" id="prideFlag" title="click me!">
         </a>
@@ -44,13 +44,10 @@
         </p>
 
         <iframe width="450" height="300" src="https://www.youtube.com/embed/lURfW4a1IcY" id="youtubeVid"></iframe>
-        <p id="youtubeTitle"></p>
-
-        <br>
 
         <p class="introText">Yet, the one-million dollar question markedly remains:</p>
             <p id="introQuote"><em>"Will the repeal of Section 377A mark the end of discrimination and stereotypes against the community?
-        Is this enough to change Singaporeans' perception on the LGBTQ+ community?"</em></p>
+            Is this enough to change Singaporeans' perception on the LGBTQ+ community?"</em></p>
         
         <p class="introText">Read on to find out more!</p>
         
@@ -61,12 +58,11 @@
 
     </div>
 
-    <br>
 
 <!-- pie chart: change of perception, 2018 VS 2022 -->
 <div id="changePerception">
     <p class="introText"><strong>Let's first understand how Singaporeans' perception on LGBTQ+ issues have changed from 2018 to 2022.</p>
-
+        
     <div id="canvas-pie">
         <canvas id="PieQ1"></canvas>
         <canvas id="PieQ2"></canvas>
@@ -90,7 +86,8 @@
     <div class="explanation">
     <p>There <em>seems</em> to be a clear trend in growing acceptance of the LGBTQ+ community in Singapore, 
         with a growing percentage of Singaporeans disagreeing with the discriminatory statements.</p>
-    <p>However, is this the case throughout the whole Singaporean population? Let's dive into another set of data, comparing between Gen Zs and Baby Boomers.</p>
+    <p>However, is this the case throughout the whole Singaporean population? 
+        Let's explore another set of data, comparing between Gen Zs and Baby Boomers.</p>
     </div>
 
     <a href="#youngOld">
@@ -99,10 +96,10 @@
 
 </div>
 
-    <br>
 
 <!-- bar chart: split data by age -->
     <div id="youngOld">
+    <p class="introText"><strong>Let's dive deeper into how the younger generation and the older generation perceive the LGBTQ+ community.</p>
         <div class="canvas-bar">
             <canvas id="age-difference" width="400" height="400"></canvas>
         </div>
@@ -186,7 +183,7 @@
             <label for="Phone">Phone</label><br>
         <input type="radio" name="contact preference" value="Email">
             <label for="Email">Email</label><br></p>
-        <button type="submit" id="buttonSubmit"><a href=#container>Submit</a></button>
+        <button type="submit" id="buttonSubmit">Submit</button>
     </form>
 
 </div>
