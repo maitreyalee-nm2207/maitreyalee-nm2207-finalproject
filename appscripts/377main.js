@@ -129,8 +129,8 @@ const dataPerception = {
             label: "2013",
             data: [61.6, 58.5, 45.9],
             borderWidth: 2,
-            backgroundColor: "rgb(197, 226, 235)",
-            borderColor: "rgb(197, 226, 235)",
+            backgroundColor: "rgb(143, 187, 188)",
+            borderColor: "rgb(143, 187, 188)",
         },
         {
             label: "2018",
