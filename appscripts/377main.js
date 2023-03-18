@@ -8,7 +8,7 @@ function prideFlag2() {
     document.getElementById("prideFlag").src= "resources/pride-flag1.png"
 }
 
-// pie chart: oppose VS support section 377A
+// pie chart: oppose VS support section 377A based on IPS report
 
 const pieQ1 = new Chart("PieQ1", 
 {
@@ -33,7 +33,7 @@ const pieQ1 = new Chart("PieQ1",
 });
 
 
-// pie chart: agrree or disagree with statement 
+// pie chart: agrree or disagree with statement based on Ipsos report
 
 const pieQ2 = new Chart("PieQ2", 
 {
@@ -118,7 +118,7 @@ document.getElementById("button2022").addEventListener("click", function changeP
 });
 
 
-// bar chart: 2013 VS 2018 perception
+// bar chart: 2013 VS 2018 perception based on IPS report
 
 const labelPerception=["'Sexual relations between two same-sex adults was always wrong.'", "'Gay marriage was always wrong.'", "'A gay couple adopting a child was always wrong.'"];
 
@@ -161,7 +161,7 @@ new Chart("singaporean-perception-change",
         }
     });
 
-// bar chart: Gen Z VS Baby Boomer perception
+// bar chart: Gen Z VS Baby Boomer perception based on 2018 report by Ipsos
 
 const labelAge = [
    ["'I believe that Singaporeans should be able to participate","in same-sex relationships.'"], 
@@ -209,7 +209,21 @@ new Chart("age-difference",
     });
 
 
-// doughnut chart: vote oppose or support
+// typewriter effect for conclusion header
+let i = 0;
+let txt = "So... What's next for Singapore?";
+let speed = 130;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("conclusionHeader").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+
+// doughnut chart: vote oppose or support Section 377A
 
 const votePie = new Chart("votePie", 
 {
@@ -234,7 +248,8 @@ const votePie = new Chart("votePie",
     }
 });
 
-// button: vote support or oppose
+
+// button: vote support or oppose Section 377A
 
 document.getElementById("opposeButton").addEventListener("click", function voteOppose() {
     
@@ -257,7 +272,7 @@ document.getElementById("supportButton").addEventListener("click", function vote
 );
 
 
-// pride flag colour changer: generate random value
+// pride flag colour changer: generate random value to get random color
 
 var scaling = function(bigValue) {
 
