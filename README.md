@@ -1,5 +1,5 @@
 # maitreyalee-nm2207.github.io
-NM2207 Final Project
+NM2207 Final Project Weekly Submissions
 
 
 Week 9 submission: https://docs.google.com/document/d/19ILKFT3qpQfL1W71gVizq_KDE-lXJWctImeOcvUIGn4/edit?usp=sharing
