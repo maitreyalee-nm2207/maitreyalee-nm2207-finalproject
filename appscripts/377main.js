@@ -161,6 +161,37 @@ new Chart("singaporean-perception-change",
         }
     });
 
+
+// buttons to find out why there is greater acceptance of the LGBTQ+ community
+
+function acceptanceText() {
+    let aText = document.getElementById("aText");
+    if (aText.style.display === "none") {
+        aText.style.display = "block";
+      } else {
+        aText.style.display = "none";
+      }
+};
+
+function exposureText() {
+    let eText = document.getElementById("eText");
+    if (eText.style.display === "none") {
+        eText.style.display = "block";
+      } else {
+        eText.style.display = "none";
+      }
+};
+
+function discussionText() {
+    let dText = document.getElementById("dText");
+    if (dText.style.display === "none") {
+        dText.style.display = "block";
+      } else {
+        dText.style.display = "none";
+      }
+};
+
+
 // bar chart: Gen Z VS Baby Boomer perception based on 2018 report by Ipsos
 
 const labelAge = [
