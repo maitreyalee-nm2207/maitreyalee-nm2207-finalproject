@@ -75,7 +75,6 @@
     
     <br>
 
-
 <!-- bar chart: change of perception, 2018 VS 2022 -->
     <p class="introText"><strong>How about the change in perception from 2013 to 2018, assessed via a few questions posed to interviwees?</p>
 
@@ -83,23 +82,80 @@
         <canvas id="singaporean-perception-change" width="400" height="400"></canvas>
     </div>
 
-    <div class="explanation">
-    <p>There <em>seems</em> to be a clear trend in growing acceptance of the LGBTQ+ community in Singapore, 
+    <p class="explanation">There <em>seems</em> to be a clear trend in growing acceptance of the LGBTQ+ community in Singapore, 
         with a growing percentage of Singaporeans disagreeing with the discriminatory statements.</p>
-    <p>However, is this the case throughout the whole Singaporean population? 
+
+    <p class="introText"><strong>What are some of the reasons as to why there is growing acceptance? Click on the icons below to find out more!</strong></p>
+
+
+    <table id="acceptanceTable">
+        <tr>
+            <td id="buttonColumn">
+                <button onclick="acceptanceText()"><img src="resources/acceptance.png" id="acceptance"></button>
+            </td>
+
+            <td>
+                <div id="aText" style="display: none">
+                <p><strong>Shifts in social norms (locally and globally)</strong></p>
+                <p>"In the past, it was very much a taboo and because of the older generations constantly mentioning about the negatives of same-sex relationship. 
+                    But across the years, I've come to know people in this category, and they are like every other normal human being, seeking their happiness and (they are) really nice and sociable people. 
+                    So why should we deny them their happiness and shun them away just because they are slightly different? 
+                    That's what changed my thoughts and made me more accepting of them.” - Male, 27 </p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="buttonColumn">
+                <button onclick="exposureText()"><img src="resources/prideHeart.png" id="prideHeart"></button>
+            </td>
+
+            <td>
+                <div id="eText" style="display: none">
+                    <p><strong>More exposure to same-sex relationships</strong></p>
+                    <p>“I have been exposed to the inequality faced by the LGBT community during my tertiary education 
+                        as well as meeting people from the community makes me feel that there isn't anything inherently wrong 
+                        except that it opposed the social norm.” - Female, 24 </p>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td id="buttonColumn">
+                <button onclick="discussionText()"><img src="resources/discussion.png" id="discussion"></button>
+            </td>
+
+            <td>
+                <div id="dText" style="display: none">
+                    <p><strong>Increased discussion on social media</strong></p>
+                    <p>“I've heard more about same-sex relationships since a few years ago (e.g. learning about Pink Dot), 
+                        and it made me empathise with them more, as it is often frowned upon, despite homosexuality/bisexuality 
+                        being completely normal.” - Female, 18</p>
+                </div>
+            </td>
+            
+        </tr>
+
+    </table>
+
+    <br>
+
+    <p class="explanation">The trends looks promising, but is this the case throughout the whole Singaporean population? 
         Let's explore another set of data, comparing between Gen Zs and Baby Boomers.</p>
-    </div>
 
     <a href="#youngOld">
-        <img src="resources/arrow.gif" id="prideArrow" title="let's go!">
+        <img src="resources/arrow.gif" id="prideArrow" title="let's go!" onclick="">
     </a>
 
 </div>
 
 
+
 <!-- bar chart: split data by age -->
     <div id="youngOld">
     <p class="introText"><strong>Let's dive deeper into how the younger generation and the older generation perceive the LGBTQ+ community.</p>
+
         <div class="canvas-bar">
             <canvas id="age-difference" width="400" height="400"></canvas>
         </div>
