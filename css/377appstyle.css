@@ -19,10 +19,14 @@ html {
 }
 
 #landingLink {
-    background-color: blanchedalmond;
     text-decoration: none;
-    padding: 2px 15px;
+    padding: 2px 16px;
     border-radius: 10px;
+    color: blanchedalmond;
+}
+
+#landingLink:hover {
+    background-color: blanchedalmond;
     color: black;
 }
 
