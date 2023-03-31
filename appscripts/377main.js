@@ -243,16 +243,21 @@ new Chart("age-difference",
 // typewriter effect for conclusion header
 let i = 0;
 let txt = "So... What's next for Singapore?";
-let speed = 130;
+let speed = 130; // speed in miliseond
+
+
 
 function typeWriter() {
-  if (i < txt.length) {
+    
+    // start with 0 letters, so the typewriter will start
+    if (i < txt.length) {
     document.getElementById("conclusionHeader").innerHTML += txt.charAt(i);
+    
+    // increasing i by 1 every milisecond
     i++;
     setTimeout(typeWriter, speed);
   }
 }
-
 
 // doughnut chart: vote oppose or support Section 377A
 
