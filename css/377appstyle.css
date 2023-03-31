@@ -12,7 +12,7 @@ html {
     font-size: larger;
     display: flex;
     flex-direction: column;
-}  
+}
 
 #pinkDotImg {
     width: 100%;
@@ -23,7 +23,7 @@ html {
     position: absolute;
     width: 70px;
     height: 70px;
-    top: 46%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -50,7 +50,7 @@ html {
 /* intro text */
 
 #introWhole {
-    background-color: blanchedalmond;
+    background-color: papayawhip;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -60,13 +60,14 @@ html {
     font-family: Optima;
     color: slategray;
     display: block;
-    line-height: 30px;
+    line-height: 32px;
     text-align: left;
     border-radius: 10px;
     padding: 5px;
     padding-left: 12%;
     padding-right: 12%;
     font-size: larger;
+    font-weight: lighter;
 }
 
 #introQuote {
@@ -79,14 +80,13 @@ html {
     padding: 5px;
     padding-left: 15%;
     padding-right: 15%;
-    font-size: large;
+    font-size: larger;
 }
 
 #youtubeVid {
     margin: auto;
     display: block;
 }
-
 
 /* div - perception change from 2018 VS 2022*/
 
@@ -105,6 +105,11 @@ html {
     border-radius: 20px;
 }
 
+#canvas-bar {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 #button-pie {
     display: flex;
     flex-direction: row;
@@ -113,8 +118,9 @@ html {
 
 #button2018 {
     background-color: lightsteelblue;
-    color: white;
+    color: rgb(77, 77, 77);
     font-family: Optima;
+    font-weight: bold;
     width: 5%;
     border: none;
     border-radius: 10px;
@@ -124,12 +130,14 @@ html {
 
 #button2018:hover {
     background-color: rgb(165, 184, 210);
+    color: white;
 }
 
 #button2022 {
     background-color: thistle;
-    color: ivory;
+    color: rgb(77, 77, 77);
     font-family: Optima;
+    font-weight: bold;
     width: 5%;
     border: none;
     border-radius: 10px;
@@ -139,6 +147,7 @@ html {
 
 #button2022:hover {
     background-color: rgb(196, 172, 196);
+    color: white;
 }
 
 #acceptanceTable {
@@ -173,40 +182,14 @@ button {
     margin-left: 50%;
 }
 
-#aText {
+#aText, #eText, #dText {
     font-family: Optima;
-    color: rgb(158, 177, 202);
-    line-height: 30px;
+    color: rosybrown;
+    line-height: 32px;
     text-align: justify;
     font-size: large;
     font-weight: lighter;
-    padding-right: 8%;
-}
-
-
-#eText {
-    font-family: Optima;
-    color: rgb(158, 177, 202);
-    display: block;
-    line-height: 30px;
-    text-align: justify;
-    border-radius: 10px;
-    font-size: large;
-    font-weight: lighter;
-    padding-right: 8%;
-}
-
-
-#dText {
-    font-family: Optima;
-    color: rgb(158, 177, 202);
-    display: block;
-    line-height: 30px;
-    text-align: justify;
-    border-radius: 10px;
-    font-size: large;
-    font-weight: lighter;
-    padding-right: 8%;
+    padding-right: 20%;
 }
 
 
@@ -228,10 +211,10 @@ button {
     margin-right: 15%;
     text-align: justify;
     font-size: larger;
-    color: cadetblue;
+    color: rgb(7, 76, 7);
     font-weight: lighter;
     display: block;
-    line-height: 30px;
+    line-height: 32px;
 }
 
 
@@ -245,9 +228,8 @@ button {
 
 #conclusionHeader {
     font-family: Optima;
-    font-size: 50px;
     color: darksalmon;
-    font-size: larger;
+    font-size: x-large;
     margin-left: 12%;
     margin-right: 12%;
 }
@@ -261,7 +243,7 @@ button {
     margin-right: 15%;
     font-weight: lighter;
     display: block;
-    line-height: 30px;
+    line-height: 32px;
 }
 
 
@@ -321,7 +303,7 @@ button {
     background-color: lightgray;
     font-family: Optima;
     border: none;
-    color: white;
+    color: black;
     padding: 10px;
     margin-left: 25%;
     width: 50%;
@@ -329,6 +311,7 @@ button {
 
 #colorButton:hover {
     background-color: rgb(189, 188, 188);
+    color: white;
 }
 
 #orange {
@@ -362,7 +345,7 @@ button {
 #formID {
     background: lavender;
     padding: 15px;
-    margin: auto;
+    font-weight: lighter;
 }
 
 #formTitle {
@@ -379,7 +362,6 @@ button {
     margin: 5px;
     margin-left: 25%;
     align-items: center;
-
 }
 
 #buttonSubmit {
