@@ -13,6 +13,8 @@
         <p id="titleText">
             Section 377A & the LGBTQ+ Community.<br>Let's talk about it.<br>
         </p>
+
+        <!-- to create the illusion of the flag waving -->
         <a href="#introWhole">
             <img onmouseover="prideFlag1()" onmouseout="prideFlag2()" src="resources/pride-flag1.png" id="prideFlag" title="click me!">
         </a>
@@ -43,11 +45,11 @@
             marked a deliberate step towards greater acceptance. Section 377A was officially repealed on 3 January 2023, marking a momentous day for the LGBTQ+ community.
         </p>
 
-        <iframe width="450" height="300" src="https://www.youtube.com/embed/lURfW4a1IcY" id="youtubeVid"></iframe>
+        <iframe width="530" height="300" src="https://www.youtube.com/embed/lURfW4a1IcY" id="youtubeVid"></iframe>
 
         <p class="introText">Yet, the one-million dollar question markedly remains:</p>
             <p id="introQuote"><em>"Will the repeal of Section 377A mark the end of discrimination and stereotypes against the community?
-            Is this enough to change Singaporeans' perception on the LGBTQ+ community?"</em></p>
+            <br> Is this enough to change Singaporeans' perception on the LGBTQ+ community?"</em></p>
         
         <p class="introText">Read on to find out more!</p>
         
@@ -64,6 +66,10 @@
     <p class="introText"><strong>Let's first understand how Singaporeans' perception on LGBTQ+ issues have changed from 2018 to 2022.</p>
         
     <div id="canvas-pie">
+
+        <!-- pie chart to show difference between 2018 VS 2022 -->
+        <!-- https://www.ipsos.com/sites/default/files/ct/news/documents/2022-06/Ipsos%20Report_Attitudes%20towards%20same-sex%20relationships%20in%20SG_June%202022.pdf -->
+
         <canvas id="PieQ1"></canvas>
         <canvas id="PieQ2"></canvas>
     </div>
@@ -76,10 +82,15 @@
     <br>
 
 <!-- bar chart: change of perception, 2018 VS 2022 -->
+
     <p class="introText"><strong>How about the change in perception from 2013 to 2018, assessed via a few questions posed to interviwees?</p>
 
     <div id="canvas-bar">
-        <canvas id="singaporean-perception-change" width="400" height="400"></canvas>
+
+        <!-- bar chartL change of perception, 2018 VS 2022 -->
+        <!-- Data source: https://www.todayonline.com/singapore/singaporeans-more-liberal-towards-homosexuality-ips-survey-finds -->
+
+        <canvas id="singaporean-perception-change" width="420" height="420"></canvas>
     </div>
 
     <p class="explanation">There <em>seems</em> to be a clear trend in growing acceptance of the LGBTQ+ community in Singapore, 
@@ -156,8 +167,12 @@
     <div id="youngOld">
     <p class="introText"><strong>Let's dive deeper into how the younger generation and the older generation perceive the LGBTQ+ community.</p>
 
-        <div class="canvas-bar">
-            <canvas id="age-difference" width="400" height="400"></canvas>
+        <div id="canvas-bar">
+
+            <!-- bar chart: difference in perception between older and younger generation -->
+            <!-- https://www.ipsos.com/sites/default/files/ct/news/documents/2018-09/singapore_public_support_split_on_337a_report_sept_2018.pdf -->
+
+            <canvas id="age-difference" width="420" height="420"></canvas>
         </div>
 
     <div class="explanation">
@@ -186,6 +201,7 @@
     </p>
 
     <br>
+
 <div id="canvas-vote-pie">
     <canvas id="votePie"></canvas>
 </div> 
@@ -242,7 +258,10 @@
         <button type="submit" id="buttonSubmit">Submit</button>
     </form>
 
-</div>
+    <p class="introText"><strong>References</strong></p>
+    <p class="introText">sources/ links used</p>
+
+    </div>
 
     </body>
 
