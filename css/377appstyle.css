@@ -4,6 +4,28 @@ html {
     scroll-behavior: smooth;
 }
 
+#landingPage {
+    background-color: rgb(12, 20, 40);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#landingTitle {
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+#landingLink {
+    background-color: blanchedalmond;
+    text-decoration: none;
+    padding: 2px 15px;
+    border-radius: 10px;
+    color: black;
+}
+
 #container {
     position: relative;
     text-align: center;
