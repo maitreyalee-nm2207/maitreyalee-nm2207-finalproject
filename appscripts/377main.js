@@ -246,7 +246,6 @@ let txt = "So... What's next for Singapore?";
 let speed = 130; // speed in miliseond
 
 
-
 function typeWriter() {
     
     // start with 0 letters, so the typewriter will start
@@ -267,7 +266,7 @@ const votePie = new Chart("votePie",
     data: {
         labels: ["Oppose Section 377A", "Support Section 377A"],
         datasets: [ {
-            data: [1, 1],
+            data: [], // initialise data array with empty array
             backgroundColor:
                 ["rgb(255, 115, 126)", "rgb(110, 219, 136)"],
             hoverOffset: 4,
@@ -287,26 +286,83 @@ const votePie = new Chart("votePie",
 
 // button: vote support or oppose Section 377A
 
-document.getElementById("opposeButton").addEventListener("click", function voteOppose() {
-    
-    const updateValue = votePie.data.datasets[0].data[0] + 1;
-    votePie.data.datasets[0].data[0] = updateValue;
-    console.log("oppose:" + updateValue);
-    
+const supportButton = document.getElementById("supportButton");
+
+supportButton.addEventListener("click", function () {
+
+    updateChart("support");
     votePie.update();
+    console.log("support is clicked");
+
 }
 );
 
-document.getElementById("supportButton").addEventListener("click", function voteSupport() {
+const opposeButton = document.getElementById("opposeButton");
+
+opposeButton.addEventListener("click", function () {
     
-    const updateValue = votePie.data.datasets[0].data[1] + 1;
-    votePie.data.datasets[0].data[1] = updateValue;
-    console.log("support: " + updateValue);
-    
+    updateChart("oppose");
     votePie.update();
+    console.log("oppose is clicked");
+
 }
 );
 
+
+// input data from fetch API endpoint into votePie
+
+const getOpinions = () => {
+    fetch("https://nm2207-db.vercel.app/api/377").then((response) =>
+      response.json().then((v) => {
+        const opposeNum = v[0].oppose; // v is value
+        const supportNum = v[0].support;
+        votePie.data.datasets[0].data = [opposeNum, supportNum];
+        votePie.update();
+      })
+    );
+  };
+
+getOpinions();
+
+const updateChart = (type) => {
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: type }),
+    };
+    fetch("https://nm2207-db.vercel.app/api/377", requestOptions)
+      .then(async (response) => {
+        const isJson = response.headers
+          .get("content-type")
+          ?.includes("application/json");
+
+        const data = isJson && (await response.json());
+
+        console.log(data);
+
+        console.log("support votes: " + data.value.support);
+        console.log("oppose votes: " + data.value.oppose);
+  
+        // check for error response
+        if (!response.ok) {
+          // get error message from body or default to response status
+          const error = (data && data.message) || response.status;
+          return Promise.reject(error);
+        }
+        console.log(data.value);
+        if (type === "support") {
+            votePie.data.datasets[0].data[1] = data.value.support
+            // votePie.update(); //update your chart with new value for support
+        } else if (type === "oppose") {
+            votePie.data.datasets[0].data[0] = data.value.oppose;
+            // votePie.update(); //update your chart with new value for oppose
+        }
+    })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  
 
 // pride flag colour changer: generate random value to get random color
 
