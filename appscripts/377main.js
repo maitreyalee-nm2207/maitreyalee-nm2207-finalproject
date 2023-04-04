@@ -284,30 +284,6 @@ const votePie = new Chart("votePie",
 });
 
 
-// button: vote support or oppose Section 377A
-
-const supportButton = document.getElementById("supportButton");
-
-supportButton.addEventListener("click", function () {
-
-    updateChart("support");
-    votePie.update();
-    console.log("support is clicked");
-
-}
-);
-
-const opposeButton = document.getElementById("opposeButton");
-
-opposeButton.addEventListener("click", function () {
-    
-    updateChart("oppose");
-    votePie.update();
-    console.log("oppose is clicked");
-
-}
-);
-
 
 // input data from fetch API endpoint into votePie
 
@@ -323,6 +299,29 @@ const getOpinions = () => {
   };
 
 getOpinions();
+
+// button: vote support or oppose Section 377A
+
+const supportButton = document.getElementById("supportButton");
+
+supportButton.addEventListener("click", function () {
+
+    updateChart("support");
+    console.log("support is clicked");
+
+}
+);
+
+const opposeButton = document.getElementById("opposeButton");
+
+opposeButton.addEventListener("click", function () {
+    
+    updateChart("oppose");
+    console.log("oppose is clicked");
+
+}
+);
+
 
 const updateChart = (type) => {
     const requestOptions = {
@@ -351,11 +350,11 @@ const updateChart = (type) => {
         }
         console.log(data.value);
         if (type === "support") {
-            votePie.data.datasets[0].data[1] = data.value.support
-            // votePie.update(); //update your chart with new value for support
+            votePie.data.datasets[0].data[1] = data.value.support + 1;
+            votePie.update(); //update your chart with new value for support
         } else if (type === "oppose") {
-            votePie.data.datasets[0].data[0] = data.value.oppose;
-            // votePie.update(); //update your chart with new value for oppose
+            votePie.data.datasets[0].data[0] = data.value.oppose + 1;
+            votePie.update(); //update your chart with new value for oppose
         }
     })
       .catch((error) => {
