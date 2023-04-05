@@ -30,6 +30,8 @@ body {
 #topButton:hover {
     background-color: rgba(87, 167, 140, 0.5);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    -webkit-transform: translateY(-1.5px);
+	transform: translateY(-1.5px);
 }
 
 #arrowUp {
@@ -40,7 +42,8 @@ body {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
-  
+
+/* landing page */
 
 #landingPage {
     background-color: rgb(10, 17, 33);
