@@ -408,3 +408,10 @@ document.getElementById("colorButton").addEventListener("click", function colorC
     console.log("change colour: " + newRgbString);
  }
  );
+
+
+ // submit button for contact form
+
+ document.getElementById("buttonSubmit").addEventListener("click", function () {
+    alert("Thanks for stopping by!");
+ });
