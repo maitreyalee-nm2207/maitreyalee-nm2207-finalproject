@@ -9,7 +9,7 @@ body {
 }
 
 #landingPage {
-    background-color: rgb(12, 20, 40);
+    background-color: rgb(10, 17, 33);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -52,9 +52,9 @@ body {
 
 #prideFlag {
     position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 41%;
+    width: 65px;
+    height: 65px;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -81,7 +81,7 @@ body {
 /* intro text */
 
 #introWhole {
-    background-color: papayawhip;
+    background-color: linen;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -89,7 +89,7 @@ body {
 
 .introText {
     font-family: Optima;
-    color: slategray;
+    color: dimgray;
     display: block;
     line-height: 32px;
     text-align: left;
@@ -105,7 +105,7 @@ body {
     font-family: Courier;
     color: salmon;
     display: block;
-    line-height: 30px;
+    line-height: 32px;
     text-align: justify;
     border-radius: 10px;
     padding: 5px;
@@ -119,10 +119,11 @@ body {
     display: block;
 }
 
+
 /* div - perception change from 2018 VS 2022*/
 
 #changePerception {
-    background-color: aliceblue;
+    background-color: rgb(245,245,245);
     display: flex;
     flex-direction: column;
 }
@@ -141,6 +142,9 @@ body {
     padding-right: 10%;
 }
 
+
+/* buttons: 2018 & 2022 */
+
 #button-pie {
     display: flex;
     flex-direction: row;
@@ -154,8 +158,8 @@ body {
     font-weight: bold;
     width: 5%;
     border: none;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 20px;
+    padding: 12px;
     margin-right: 15px;
 }
 
@@ -171,8 +175,8 @@ body {
     font-weight: bold;
     width: 5%;
     border: none;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 20px;
+    padding: 12px;
     margin-left: 15px;
 }
 
@@ -180,6 +184,8 @@ body {
     background-color: rgb(196, 172, 196);
     color: white;
 }
+
+/* buttons: explanation why there is greater acceptance in recent years */
 
 #acceptanceTable {
     width: 100%;
@@ -199,23 +205,23 @@ button {
 }
 
 #acceptance {
-    width: 23%;
-    margin-left: 35%;
+    width: 26%;
+    margin-left: 38%;
 }
 
-#prideHeart {
-    width: 30%;
-    margin-left: 50%;
+#exposure {
+    width: 26%;
+    margin-left: 38%;
 }
 
 #discussion {
-    width: 36%;
-    margin-left: 50%;
+    width: 26%;
+    margin-left: 38%;
 }
 
 #aText, #eText, #dText {
     font-family: Optima;
-    color: rosybrown;
+    color: rgb(162, 110, 110);
     line-height: 32px;
     text-align: justify;
     font-size: large;
@@ -227,7 +233,7 @@ button {
 /* div: split data by age */
 
 #youngOld {
-    background-color: lavenderblush;
+    background-color: linen;
     display: flex;
     flex-direction: column;
 }
@@ -252,7 +258,7 @@ button {
 /* conclusion */
 
 #conclusion {
-    background-color: beige;
+    background-color: rgb(245,245,245);
     padding: 10px;
 }
 
@@ -297,8 +303,8 @@ button {
     font-family: Optima;
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 20px;
     margin-right: 10px;
 }
 
@@ -311,8 +317,8 @@ button {
     font-family: Optima;
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 20px;
     margin-right: 10px;
 }
 
@@ -373,7 +379,7 @@ button {
 /* contact form */
 
 #contactForm {
-    background-color: lavender;
+    background-color: rgb(221,235,240);
     display: flex;
     flex-direction: column;
 }
@@ -386,26 +392,28 @@ button {
 #formTitle {
     text-align: center;
     font-family: Optima;
+    color: darkslategray;
 }
 
 .formContent {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
     font-family: Optima;
     width: 45%;
     margin: 5px;
     margin-left: 28%;
     align-items: center;
+    color: darkslategray;
 }
 
 #buttonSubmit {
-    width: 30%;
-    margin-left: 37%;
-    padding: 10px;
+    width: 10%;
+    margin-left: 46%;
+    padding: 12px;
     background-color: darkseagreen;
     font-family: Optima;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     color: white;
 }
@@ -413,4 +421,42 @@ button {
 #buttonSubmit:hover {
     background-color: mediumseagreen;
     box-shadow: 0 12px 10px 0 rgba(0,0,0,0.24);
+}
+
+#buttonSubmit span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+#buttonSubmit span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right:10px;
+    transition: 0.5s;
+  }
+
+#buttonSubmit:hover span {
+    padding-right: 15px;
+}
+  
+#buttonSubmit:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* credits */
+
+#creditsTable {
+    font-family: Optima;
+    color: dimgray;
+    text-align: center;
+}
+
+#creditsDetail {
+    width: 33.3%;
 }
