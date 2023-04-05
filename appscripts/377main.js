@@ -9,6 +9,27 @@ function prideFlag2() {
 }
 
 
+// back to top button
+
+let topButton = document.getElementById("topButton");
+
+// When the user scrolls down 500px from the top of the document, button will appear
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // pie chart: oppose VS support section 377A based on IPS report
 
 const pieQ1 = new Chart("PieQ1", 
