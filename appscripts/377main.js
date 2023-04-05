@@ -1,12 +1,13 @@
 // waving pride flag
 
 function prideFlag1() {
-    document.getElementById("prideFlag").src= "resources/pride-flag2.png"
+    document.getElementById("prideFlag").src= "resources/prideflag2.png"
 }
 
 function prideFlag2() {
-    document.getElementById("prideFlag").src= "resources/pride-flag1.png"
+    document.getElementById("prideFlag").src= "resources/prideflag.png"
 }
+
 
 // pie chart: oppose VS support section 377A based on IPS report
 
@@ -14,7 +15,7 @@ const pieQ1 = new Chart("PieQ1",
 {
     type: "pie",
     data: {
-        labels: ["Oppose Section 377A", "Support Section 377A"],
+        labels: ["Oppose", "Support"],
         datasets: [ {
             data: [16.6, 83.3],
             backgroundColor: ["rgb(250,128,114)", "rgb(144,238,144)"],
@@ -25,7 +26,7 @@ const pieQ1 = new Chart("PieQ1",
         plugins:{
             title:{
                 display: true,
-                text: "Support VS Opposition for Section 377A in 2018",
+                text: ["Support VS Opposition for","Section 377A in 2018"],
                 padding: {top:10, bottom:10},
             }
         }
@@ -39,7 +40,7 @@ const pieQ2 = new Chart("PieQ2",
 {
     type: "pie",
     data: {
-        labels: ["Disagree with statement", "Agree with statement"],
+        labels: ["Disagree", "Agree"],
         datasets: [ {
             data: [51.5, 48.5],
             backgroundColor: ["rgb(250,128,114)", "rgb(144,238,144)"],
@@ -62,27 +63,19 @@ const pieQ2 = new Chart("PieQ2",
 
 document.getElementById("button2018").addEventListener("click", function changePerception() {
     
-    const newOppose = 16.6;
-    pieQ1.data.datasets[0].data[0] = newOppose;
-
-    const newSupport = 83.3;
-    pieQ1.data.datasets[0].data[1] = newSupport;
-
-    const newDisagree = 51.5;
-    pieQ2.data.datasets[0].data[0] = newDisagree;
-
-    const newAgree = 48.5;
-    pieQ2.data.datasets[0].data[1] = newAgree;
-
-    const newQ1Text = "Support VS Opposition for Section 377A in 2018";
-    pieQ1.options.plugins.title.text = newQ1Text;
-
-    const newQ2Text = ["'I am more accepting of same-sex relationships","than I was before.' (2018)"];
-    pieQ2.options.plugins.title.text = newQ2Text;
-
-
+    pieQ1.data.datasets[0].data[0] = 16.6;
+    pieQ1.data.datasets[0].data[1] = 83.3;
+    
+    pieQ2.data.datasets[0].data[0] = 51.5;
+    pieQ2.data.datasets[0].data[1] = 48.5;
+    
+    pieQ1.options.plugins.title.text = ["Support VS Opposition for","Section 377A in 2018"];
+    pieQ2.options.plugins.title.text = ["'I am more accepting of same-sex relationships","than I was before.' (2018)"];
+    
     pieQ1.update();
     pieQ2.update();
+
+    // console.log("test 2018 button");
 
     setTimeout(()=>{alert("Hmm, Singaporeans aren't very accepting of the community in the past.");}, 1000);
 
@@ -90,23 +83,14 @@ document.getElementById("button2018").addEventListener("click", function changeP
 
 document.getElementById("button2022").addEventListener("click", function changePerception() {
     
-    const newOppose = 30.8;
-    pieQ1.data.datasets[0].data[0] = newOppose;
+    pieQ1.data.datasets[0].data[0] = 30.8;
+    pieQ1.data.datasets[0].data[1] = 69.2;
 
-    const newSupport = 69.2;
-    pieQ1.data.datasets[0].data[1] = newSupport;
-
-    const newDisagree = 36.6;
-    pieQ2.data.datasets[0].data[0] = newDisagree;
-
-    const newAgree = 63.4;
-    pieQ2.data.datasets[0].data[1] = newAgree;
-
-    const newQ1Text = "Support VS Opposition for Section 377A in 2022";
-    pieQ1.options.plugins.title.text = newQ1Text;
-
-    const newQ2Text = ["'I am more accepting of same-sex relationships","than I was before.' (2022)"];
-    pieQ2.options.plugins.title.text = newQ2Text;
+    pieQ2.data.datasets[0].data[0] = 36.6;
+    pieQ2.data.datasets[0].data[1] = 63.4;
+    
+    pieQ1.options.plugins.title.text = ["Support VS Opposition for","Section 377A in 2022"];
+    pieQ2.options.plugins.title.text = ["'I am more accepting of same-sex relationships","than I was before.' (2022)"];
 
     // console.log(pieQ1.options.plugins.title.text);
 
@@ -162,7 +146,7 @@ new Chart("singaporean-perception-change",
     });
 
 
-// buttons to find out why there is greater acceptance of the LGBTQ+ community
+// functions to hide and show texts whenever the buttons are clicked
 
 function acceptanceText() {
     let aText = document.getElementById("aText");
@@ -241,6 +225,7 @@ new Chart("age-difference",
 
 
 // typewriter effect for conclusion header
+
 let i = 0;
 let txt = "So... What's next for Singapore?";
 let speed = 130; // speed in miliseond
@@ -258,7 +243,8 @@ function typeWriter() {
   }
 }
 
-// doughnut chart: vote oppose or support Section 377A
+
+// doughnut chart: for users to vote whether they oppose or support Section 377A
 
 const votePie = new Chart("votePie", 
 {
@@ -284,7 +270,6 @@ const votePie = new Chart("votePie",
 });
 
 
-
 // input data from fetch API endpoint into votePie
 
 const getOpinions = () => {
@@ -293,12 +278,13 @@ const getOpinions = () => {
         const opposeNum = v[0].oppose; // v is value
         const supportNum = v[0].support;
         votePie.data.datasets[0].data = [opposeNum, supportNum];
-        votePie.update();
+        votePie.update(); // initialise data of votePie, set to the numbers stored in the server
       })
     );
   };
 
-getOpinions();
+getOpinions(); // need to call the function for the pie to be updated
+
 
 // button: vote support or oppose Section 377A
 
@@ -323,6 +309,8 @@ opposeButton.addEventListener("click", function () {
 );
 
 
+// connect votePie to the server via fetch API, and updates votePie everytime the respective buttons are clicked
+
 const updateChart = (type) => {
     const requestOptions = {
       method: "PUT",
@@ -335,6 +323,7 @@ const updateChart = (type) => {
           .get("content-type")
           ?.includes("application/json");
 
+        //
         const data = isJson && (await response.json());
 
         console.log(data);
@@ -350,7 +339,7 @@ const updateChart = (type) => {
         }
         console.log(data.value);
         if (type === "support") {
-            votePie.data.datasets[0].data[1] = data.value.support + 1;
+            votePie.data.datasets[0].data[1] = data.value.support + 1; // need to add 1 to the value in the server for votePie to be updated
             votePie.update(); //update your chart with new value for support
         } else if (type === "oppose") {
             votePie.data.datasets[0].data[0] = data.value.oppose + 1;
@@ -365,11 +354,11 @@ const updateChart = (type) => {
 
 // pride flag colour changer: generate random value to get random color
 
-var scaling = function(bigValue) {
+let scaling = function(bigValue) {
 
-    var scaleV = 0;
+    let scaleV = 0;
 
-    var sinValue = Math.sin(bigValue);
+    let sinValue = Math.sin(bigValue);
     
     // x: rgb value range
     xMax = 255;
@@ -386,15 +375,15 @@ var scaling = function(bigValue) {
     return scaleV;
 };
 
-var redValue = 255*Math.random();
+let redValue = 255*Math.random();
 
 document.getElementById("colorButton").addEventListener("click", function colorChanger() {
 
     redValue = redValue + 50;
-    var scaledRed = scaling(redValue);
-    var newRgbString = "rgb("+scaledRed+"," +0+ "," +0+")";
+    let scaledRed = scaling(redValue);
+    let newRgbString = "rgb("+scaledRed+"," +0+ "," +0+")";
 
-    colorButton.style.backgroundColor = newRgbString;
+    colorButton.style.backgroundColor = newRgbString; // change colour of button everytime it is clicked
     console.log("change colour: " + newRgbString);
  }
  );
