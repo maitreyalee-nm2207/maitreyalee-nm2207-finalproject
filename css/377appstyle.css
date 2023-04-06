@@ -336,9 +336,9 @@ button {
 }
 
 #supportButton {
-    background-color: darkseagreen;
+    background-color: rgb(240,208,166);
     font-family: Optima;
-    color: white;
+    color: black;
     border: none;
     padding: 15px;
     border-radius: 20px;
@@ -346,13 +346,14 @@ button {
 }
 
 #supportButton:hover {
-    background-color: mediumseagreen;
+    background-color: rgb(228, 198, 157);
+    color: white;
 }
 
 #opposeButton {
-    background-color: indianred;
+    background-color: rgb(180,218,240);
     font-family: Optima;
-    color: white;
+    color: black;
     border: none;
     padding: 15px;
     border-radius: 20px;
@@ -360,7 +361,8 @@ button {
 }
 
 #opposeButton:hover {
-    background-color: tomato;
+    background-color: rgb(167, 203, 224);
+    color: white;
 }
 
 
