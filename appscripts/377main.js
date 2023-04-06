@@ -39,7 +39,7 @@ const pieQ1 = new Chart("PieQ1",
         labels: ["Oppose", "Support"],
         datasets: [ {
             data: [16.6, 83.3],
-            backgroundColor: ["rgb(250,128,114)", "rgb(144,238,144)"],
+            backgroundColor: ["rgb(180,218,240)", "rgb(240,208,166)"],
             hoverOffset: 4,
             }]
         },
@@ -64,7 +64,7 @@ const pieQ2 = new Chart("PieQ2",
         labels: ["Disagree", "Agree"],
         datasets: [ {
             data: [51.5, 48.5],
-            backgroundColor: ["rgb(250,128,114)", "rgb(144,238,144)"],
+            backgroundColor: ["rgb(240,192,192)", "rgb(139,232,166)"],
             hoverOffset: 4,
             }]
         },
@@ -219,8 +219,8 @@ const dataAge = {
             label: "Baby Boomers",
             data: [48, 23, 37],
             borderWidth: 1,
-            backgroundColor: "rgb(200, 235, 183)",
-            borderColor: "rgb(200, 235, 183)",
+            backgroundColor: "rgb(176,232,153)",
+            borderColor: "rgb(176,232,153)",
         },
     ]
 }
@@ -275,7 +275,7 @@ const votePie = new Chart("votePie",
         datasets: [ {
             data: [], // initialise data array with empty array
             backgroundColor:
-                ["rgb(255, 115, 126)", "rgb(110, 219, 136)"],
+                ["rgb(180,218,240)", "rgb(240,208,166)"],
             hoverOffset: 4,
             }]
         },
@@ -344,7 +344,6 @@ const updateChart = (type) => {
           .get("content-type")
           ?.includes("application/json");
 
-        //
         const data = isJson && (await response.json());
 
         console.log(data);
