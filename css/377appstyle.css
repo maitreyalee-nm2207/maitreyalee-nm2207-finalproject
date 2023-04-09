@@ -52,7 +52,6 @@ body {
     border: 2px solid rgba(32, 206, 136, 0.637);
     border-radius: 50%;
     box-sizing: border-box;
-    transition: 0.1s;
     transform: translate(-50%, -50%);
     pointer-events: none; /* prevents the cursor from interfering with mouse events */
     z-index: 9999; /* makes sure that the cursor appears on top of other elements */
