@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0px;
+    cursor: none;
 }
 
 /* back to top button */
@@ -20,7 +21,6 @@ body {
     border: none;
     outline: none;
     background-color: rgba(99, 199, 166, 0.5);
-    cursor: pointer;
     padding: 15px;
     height: 45px;
     width: 45px;
@@ -42,6 +42,22 @@ body {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
+
+/* tracking cursor */
+
+#cursor {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(32, 206, 136, 0.637);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* prevents the cursor from interfering with mouse events */
+    z-index: 9999; /* makes sure that the cursor appears on top of other elements */
+}
+
 
 /* landing page */
 
@@ -65,6 +81,7 @@ body {
     padding: 2px 16px;
     border-radius: 10px;
     color: blanchedalmond;
+    cursor: none;
 }
 
 #landingLink:hover {
@@ -94,12 +111,14 @@ body {
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: none;
 }
 
 #prideArrow {
     width: 80px;
     height: 80px;
     margin-left: 50%;
+    cursor: none;
 }
 
 #titleText {
@@ -107,7 +126,7 @@ body {
     top: 29%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(22, 22, 85, 0.5);
+    background-color: rgba(19, 19, 87, 0.5);
     padding: 15px;
     border-radius: 15px;
     font-family: Optima;
@@ -238,7 +257,7 @@ body {
 button {
     background: none;
     border: none;
-    cursor: pointer;
+    cursor: none;
 }
 
 #acceptance {
@@ -463,7 +482,6 @@ button {
 }
 
 #buttonSubmit span {
-    cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
