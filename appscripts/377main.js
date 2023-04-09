@@ -1,10 +1,12 @@
 // waving pride flag
 
 function prideFlag1() {
+    // changes the image of the flag to a flipped version on mouse over
     document.getElementById("prideFlag").src= "resources/prideflag2.png"
 }
 
 function prideFlag2() {
+    // changes the image of the flag to its original version on mouse out
     document.getElementById("prideFlag").src= "resources/prideflag.png"
 }
 
@@ -13,13 +15,17 @@ function prideFlag2() {
 
 let topButton = document.getElementById("topButton");
 
-// When the user scrolls down 500px from the top of the document, button will appear
+// function will be called upon scrolling
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    
+    // when user scrolls down 500px from the top of the document, the button will appear
     topButton.style.display = "block";
   } else {
+
+    // otherwise, the button will not appear
     topButton.style.display = "none";
   }
 }
@@ -29,6 +35,19 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+// custom tracking cursor
+
+const cursor = document.getElementById("cursor");
+document.addEventListener("mousemove", function(e) {
+    let x = e.pageX;
+    let y = e.pageY;
+
+    // update the position of the custom cursor element based on the mouse position
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+});
 
 // pie chart: oppose VS support section 377A based on IPS report
 
@@ -84,6 +103,7 @@ const pieQ2 = new Chart("PieQ2",
 
 document.getElementById("button2018").addEventListener("click", function changePerception() {
     
+    // assigning values to the pie charts upon clicking the 2018 button
     pieQ1.data.datasets[0].data[0] = 16.6;
     pieQ1.data.datasets[0].data[1] = 83.3;
     
@@ -104,6 +124,7 @@ document.getElementById("button2018").addEventListener("click", function changeP
 
 document.getElementById("button2022").addEventListener("click", function changePerception() {
     
+    // assigning new values to the pie charts upon clicking the 2022 button
     pieQ1.data.datasets[0].data[0] = 30.8;
     pieQ1.data.datasets[0].data[1] = 69.2;
 
@@ -172,8 +193,12 @@ new Chart("singaporean-perception-change",
 function acceptanceText() {
     let aText = document.getElementById("aText");
     if (aText.style.display === "none") {
+
+        // if text was hidden, clicking the button will show it again
         aText.style.display = "block";
       } else {
+
+        // if text was already present, clicking the button will hide the text
         aText.style.display = "none";
       }
 };
@@ -248,17 +273,17 @@ new Chart("age-difference",
 // typewriter effect for conclusion header
 
 let i = 0;
-let txt = "So... What's next for Singapore?";
+let text = "So... What's next for Singapore?";
 let speed = 130; // speed in miliseond
 
 
 function typeWriter() {
     
     // start with 0 letters, so the typewriter will start
-    if (i < txt.length) {
-    document.getElementById("conclusionHeader").innerHTML += txt.charAt(i);
+    if (i < text.length) {
+    document.getElementById("conclusionHeader").innerHTML += text.charAt(i);
     
-    // increasing i by 1 every milisecond
+    // increasing number of letters by 1 every milisecond
     i++;
     setTimeout(typeWriter, speed);
   }
@@ -298,7 +323,7 @@ const getOpinions = () => {
       response.json().then((v) => {
         const opposeNum = v[0].oppose; // v is value
         const supportNum = v[0].support;
-        votePie.data.datasets[0].data = [opposeNum, supportNum];
+        votePie.data.datasets[0].data = [opposeNum, supportNum]; // set data of votePie with data stored in server
         votePie.update(); // initialise data of votePie, set to the numbers stored in the server
       })
     );
@@ -313,7 +338,7 @@ const supportButton = document.getElementById("supportButton");
 
 supportButton.addEventListener("click", function () {
 
-    updateChart("support");
+    updateChart("support"); // call updateChart function that inputs the support vote into the server and updates the chart
     console.log("support is clicked");
 
 }
@@ -323,7 +348,7 @@ const opposeButton = document.getElementById("opposeButton");
 
 opposeButton.addEventListener("click", function () {
     
-    updateChart("oppose");
+    updateChart("oppose"); // call updateChart function that inputs the oppose vote into the server and updates the chart
     console.log("oppose is clicked");
 
 }
