@@ -117,7 +117,7 @@ body {
     width: 80px;
     height: 80px;
     margin-left: 50%;
-    cursor: none;
+    cursor: pointer;
 }
 
 #titleText {
@@ -256,7 +256,7 @@ body {
 button {
     background: none;
     border: none;
-    cursor: none;
+    cursor: pointer;
 }
 
 #acceptance {
