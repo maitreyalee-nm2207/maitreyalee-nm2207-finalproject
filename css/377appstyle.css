@@ -194,7 +194,12 @@ body {
 
 #canvas-bar {
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 10%
+}
+
+#canvas-line {
+    margin-left: 22%;
+    width: 55%;
 }
 
 
