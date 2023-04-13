@@ -155,15 +155,15 @@ const dataPerception = {
             label: "2013",
             data: [61.6, 58.5, 45.9],
             borderWidth: 2,
-            backgroundColor: "rgb(143, 187, 188)",
-            borderColor: "rgb(143, 187, 188)",
+            borderColor: "rgb(130, 167, 166)",
+            backgroundColor: "rgb(143, 187, 188, 0.7)",
         },
         {
             label: "2018",
             data: [50.4, 48.5, 41.2],
             borderWidth: 2,
-            backgroundColor: "rgb(250, 170, 210)",
-            borderColor: "rgb(250, 170, 210)",
+            borderColor: "rgb(230, 154, 192)",
+            backgroundColor: "rgb(250, 170, 210, 0.7)",
         },
     ]
 }
@@ -222,6 +222,40 @@ function discussionText() {
 };
 
 
+// line chart: propoertion of Gen Z VS Baby Boomers in Singapore
+
+let year = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+let genzAge = [926035, 935265, 946412, 939488, 946630, 960224, 974319, 985598, 
+                1005151, 1027464, 1027881, 1018949, 1011269, 1003814, 997710, 
+                992447, 988108, 988496, 980197, 967421, 953161, 920663, 922513];
+let babyboomerAge = [235296, 243639, 251024, 248638, 264541, 279693, 294726, 305586,
+                315790, 330132, 338387, 352645, 378636, 404437, 431601, 459715,
+                487570, 516692, 547854, 581680, 614368, 639008, 678133];
+
+
+new Chart("singapore-population", {
+    type: 'line',
+    data: {
+        labels: year, // years as data
+        datasets: [
+            { 
+            data: genzAge, // africa as dataset
+            label: "Gen Z",
+            borderColor:"rgb(159, 173, 212)",
+            backgroundColor: "rgb(174, 191, 235, 0.3)",
+            fill: true,
+            },
+            { 
+            data: babyboomerAge,
+            label: "Baby Boomers",
+            borderColor: "rgb(152, 189, 138)",
+            backgroundColor: "rgb(176, 232, 153, 0.3)",
+            fill: true
+            },
+        ]}
+});
+                  
+
 // bar chart: Gen Z VS Baby Boomer perception based on 2018 report by Ipsos
 
 const labelAge = [
@@ -237,15 +271,15 @@ const dataAge = {
             label: "Gen Z",
             data: [56, 59, 54],
             borderWidth: 1,
-            backgroundColor: "rgb(174, 191, 235)",
-            borderColor: "rgb(174, 191, 235)",
+            borderColor: "rgb(159, 173, 212)",
+            backgroundColor: "rgb(174, 191, 235, 0.7)",
         },
         {
             label: "Baby Boomers",
             data: [48, 23, 37],
             borderWidth: 1,
-            backgroundColor: "rgb(176,232,153)",
-            borderColor: "rgb(176,232,153)",
+            borderColor: "rgb(152, 189, 138)",
+            backgroundColor: "rgb(176, 232, 153, 0.7)",
         },
     ]
 }
@@ -263,7 +297,7 @@ new Chart("age-difference",
                     text:["Gen Zs VS Baby Boomers perception","on the LGBTQ+ community"],
                     fontFamily: "monospace",
                     fontSize: 24,
-                    fontColor: 'rgb(0,120,0)',
+                    fontColor: 'rgb(0, 120, 0)',
                 }
             }
         }
@@ -300,7 +334,7 @@ const votePie = new Chart("votePie",
         datasets: [ {
             data: [], // initialise data array with empty array
             backgroundColor:
-                ["rgb(180,218,240)", "rgb(240,208,166)"],
+                ["rgb(180, 218, 240)", "rgb(240, 208, 166)"],
             hoverOffset: 4,
             }]
         },
