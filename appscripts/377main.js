@@ -155,7 +155,7 @@ const dataPerception = {
             label: "2013",
             data: [61.6, 58.5, 45.9],
             borderWidth: 2,
-            borderColor: "rgb(130, 167, 166)",
+            borderColor: "rgb(138, 180, 181)",
             backgroundColor: "rgb(143, 187, 188, 0.7)",
         },
         {
@@ -239,7 +239,7 @@ new Chart("singapore-population", {
         labels: year, // years as data
         datasets: [
             { 
-            data: genzAge, // africa as dataset
+            data: genzAge, // genzAge as dataset
             label: "Gen Z",
             borderColor:"rgb(159, 173, 212)",
             backgroundColor: "rgb(174, 191, 235, 0.3)",
@@ -270,14 +270,14 @@ const dataAge = {
         {
             label: "Gen Z",
             data: [56, 59, 54],
-            borderWidth: 1,
+            borderWidth: 2,
             borderColor: "rgb(159, 173, 212)",
             backgroundColor: "rgb(174, 191, 235, 0.7)",
         },
         {
             label: "Baby Boomers",
             data: [48, 23, 37],
-            borderWidth: 1,
+            borderWidth: 2,
             borderColor: "rgb(152, 189, 138)",
             backgroundColor: "rgb(176, 232, 153, 0.7)",
         },
