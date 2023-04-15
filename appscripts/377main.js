@@ -103,12 +103,15 @@ const pieQ2 = new Chart("PieQ2",
 
 document.getElementById("button2018").addEventListener("click", function changePerception() {
     
-    // assigning values to the pie charts upon clicking the 2018 button
+    // assigning new data to the pie charts upon clicking the 2018 button
+    
     pieQ1.data.datasets[0].data[0] = 16.6;
     pieQ1.data.datasets[0].data[1] = 83.3;
     
     pieQ2.data.datasets[0].data[0] = 51.5;
     pieQ2.data.datasets[0].data[1] = 48.5;
+
+    // assigning new text to the pie charts upon clicking the 2018 button
     
     pieQ1.options.plugins.title.text = ["Support VS Opposition for","Section 377A in 2018"];
     pieQ2.options.plugins.title.text = ["'I am more accepting of same-sex relationships","than I was before.' (2018)"];
@@ -124,12 +127,15 @@ document.getElementById("button2018").addEventListener("click", function changeP
 
 document.getElementById("button2022").addEventListener("click", function changePerception() {
     
-    // assigning new values to the pie charts upon clicking the 2022 button
+    // assigning new data to the pie charts upon clicking the 2022 button
+    
     pieQ1.data.datasets[0].data[0] = 30.8;
     pieQ1.data.datasets[0].data[1] = 69.2;
 
     pieQ2.data.datasets[0].data[0] = 36.6;
     pieQ2.data.datasets[0].data[1] = 63.4;
+
+    // assigning new text to the pie charts upon clicking the 2022 button
     
     pieQ1.options.plugins.title.text = ["Support VS Opposition for","Section 377A in 2022"];
     pieQ2.options.plugins.title.text = ["'I am more accepting of same-sex relationships","than I was before.' (2022)"];
@@ -236,21 +242,21 @@ let babyboomerAge = [235296, 243639, 251024, 248638, 264541, 279693, 294726, 305
 new Chart("singapore-population", {
     type: 'line',
     data: {
-        labels: year, // years as data
+        labels: year, // the different years as data, shown on x-axis
         datasets: [
             { 
-            data: genzAge, // genzAge as dataset
+            data: genzAge, // genzAge as dataset, shown on y-axis
             label: "Gen Z",
             borderColor:"rgb(159, 173, 212)",
             backgroundColor: "rgb(174, 191, 235, 0.3)",
-            fill: true,
+            fill: true, // area below line will be coloured
             },
             { 
-            data: babyboomerAge,
+            data: babyboomerAge, // babyboomerAge as dataset, shown on y-axis
             label: "Baby Boomers",
             borderColor: "rgb(152, 189, 138)",
             backgroundColor: "rgb(176, 232, 153, 0.3)",
-            fill: true
+            fill: true // area below line will be coloured
             },
         ]}
 });
@@ -315,6 +321,9 @@ function typeWriter() {
     
     // start with 0 letters, so the typewriter will start
     if (i < text.length) {
+
+    // inserts text as defined above into "conclusionHeader" element in HTML
+    // The charAt() method returns the character at the specified index in a string, which starts at 0.
     document.getElementById("conclusionHeader").innerHTML += text.charAt(i);
     
     // increasing number of letters by 1 every milisecond
@@ -363,7 +372,7 @@ const getOpinions = () => {
     );
   };
 
-getOpinions(); // need to call the function for the pie to be updated
+getOpinions(); // need to first call the function for the pie chart to be updated with the server values
 
 
 // button: vote support or oppose Section 377A
@@ -397,7 +406,7 @@ const updateChart = (type) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ type: type }),
     };
-    fetch("https://nm2207-db.vercel.app/api/377", requestOptions)
+    fetch("https://nm2207-db.vercel.app/api/377", requestOptions) // fetches data from server which stores the number of oppose and support votes
       .then(async (response) => {
         const isJson = response.headers
           .get("content-type")
@@ -419,10 +428,10 @@ const updateChart = (type) => {
         console.log(data.value);
         if (type === "support") {
             votePie.data.datasets[0].data[1] = data.value.support + 1; // need to add 1 to the value in the server for votePie to be updated
-            votePie.update(); //update your chart with new value for support
+            votePie.update(); //updates my doughnut chart with new value for support
         } else if (type === "oppose") {
             votePie.data.datasets[0].data[0] = data.value.oppose + 1;
-            votePie.update(); //update your chart with new value for oppose
+            votePie.update(); //updates my doughnut chart with new value for oppose
         }
     })
       .catch((error) => {
@@ -458,11 +467,11 @@ let redValue = 255*Math.random();
 
 document.getElementById("colorButton").addEventListener("click", function colorChanger() {
 
-    redValue = redValue + 50;
-    let scaledRed = scaling(redValue);
-    let newRgbString = "rgb("+scaledRed+"," +0+ "," +0+")";
+    redValue = redValue + 50; // increases R value by 50 everytime the button is clicked
+    let scaledRed = scaling(redValue); // ensure that random value generated is within 0 to 255
+    let newRgbString = "rgb("+scaledRed+"," +0+ "," +0+")"; // make sure only shades of red are generated
 
-    colorButton.style.backgroundColor = newRgbString; // change colour of button everytime it is clicked
+    colorButton.style.backgroundColor = newRgbString; // assigns a random rgb string to the button everytime it is clicked
     console.log("change colour: " + newRgbString);
  }
  );
