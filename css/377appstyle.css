@@ -144,7 +144,7 @@ body {
 
 .introText {
     font-family: Optima;
-    color: dimgray;
+    color: rgb(94, 94, 94);
     display: block;
     line-height: 32px;
     text-align: left;
@@ -158,7 +158,7 @@ body {
 
 #introQuote {
     font-family: Courier;
-    color: salmon;
+    color: rgb(241, 124, 111);
     display: block;
     line-height: 32px;
     text-align: justify;
@@ -330,7 +330,7 @@ button {
 
 #conclusionHeader {
     font-family: Optima;
-    color: darksalmon;
+    color: rgb(222, 142, 115);
     font-size: x-large;
     text-align: center;
     
@@ -339,7 +339,7 @@ button {
 .conclusionText {
     padding: 10px;
     font-family: Optima;
-    color: teal;
+    color: rgb(0, 119, 119);
     font-size: larger;
     margin-left: 17%;
     margin-right: 17%;
@@ -519,7 +519,7 @@ button {
 
 .referencesText {
     font-family: Optima;
-    color: rgb(55, 55, 55);
+    color: rgb(71, 71, 71);
     display: block;
     line-height: 32px;
     text-align: left;
